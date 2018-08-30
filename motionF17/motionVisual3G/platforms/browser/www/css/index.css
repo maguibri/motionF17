@@ -1,0 +1,47 @@
+/*
+ * index.css
+ * put your css here
+ */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+/*----------------------------------------------------------------------
+|	Google maps take up the height of their container. Contrary to
+|	what most folks think, containers take up no space unless you put 
+|	something in it that takes space, or, you specify the size with
+|	by hand like: width: 350px; height: 300px; Responsive sites need
+|	to be more general. Here we proportion the amount of height
+|	1) Tell the <html> and <body> to take up 100% of viewport height, 
+|	   by default they are zero pixels tall
+|	2) Split the header and map to proportions that add up to 100%
+|	Of course, you can make many divs, just add up heights to 100% 
+|
+| if you try your own hand at this, and have no console errors and do
+| not see your map, see the height of your map div, I bet it is zero! 
+----------------------------------------------------------------------*/
+
+html, body 	{ height: 100vh; } 	/* 100% of Viewport Height 		 	*/
+#header 	{ height:  10vh; } 	/* header gets some height       	*/
+#mapDiv 	{ height:  90vh; }  /* map gets some height          	*/
+
+/* styles to make it look nice, not required for functionality   	*/
+#header 	{ background-color: black; }
+
+#header {
+	text-align:  	center;		/* centered left-right 				*/
+	vertical-align: middle;		/* centered top-bottom              */
+	color: 			white;		/* white font color                 */
+	font-family: 	sans-serif;	/* modern look                      */
+	font-size: 		8vh; 		/* 8% Vertical Height responsive! 	*/
+								/* font will take up 8%, 1% pad top */
+								/* since container is 10%           */
+}
+
+input[type=number] {
+	font-size:  	3vh;	
+	width: 			40vw;
+	text-align: 	right;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Adv Geo Mobile Map</title>
+
+	<meta name="viewport" 
+		  content="width=device-width, user-scalable=no, 
+		  initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<!-- This is not a secure content policy, should be locked down for prod 
+	<meta http-equiv="Content-Security-Policy" 
+		  content="default-src 'self' gap://ready; 
+		           style-src   'self' https://maps.googleapis.com/ 'unsafe-inline'; 
+		           script-src  'self' https://maps.googleapis.com/ 'unsafe-inline'; ">
+-->
+    <!-- NOTICE: ADDED GOOGLEAPIS URL to Content Security Policy -->
+
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+</head>
+<body> <!-- no onload - see index.js for "ondeviceready" event listener -->
+
+    <div id="header">
+        <input  id="latitudeId" type="number" step="any" 
+                value="0" min="-90.00" max="+90.00" required>    
+        <input  id="longitudeId" type="number" step="any" 
+                value="0" min="-180.00" max="+180.00" required>    
+
+        <button id="mapGeoButtonId">Map</button>
+    </div>
+     <div id="mapDiv"></div>
+
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+
+</body>
+</html>
